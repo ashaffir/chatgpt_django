@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row col-6">
+            <form action="{% url 'main:chat' %}" method="post">
+                {% csrf_token %}
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div>
+            <h4>Response</h4>
+            <p>{{ response }}</p>
+
+            <h5>Usage</h5>
+            {{ usage }}
+        </div>
+    </div>
+</body>
+</html>
