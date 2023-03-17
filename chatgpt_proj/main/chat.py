@@ -1,8 +1,10 @@
 import openai
+from django.conf import settings
 
-openai.api_key = "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"
+openai.api_key = settings.OPENAI_KEY
 
 def get_response(text):
+    print(f"KY: {settings.OPENAI_KEY}")
     print(f"TEXT: {text}")
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
