@@ -1,0 +1,1 @@
+# ChatGPT integrated in Django
